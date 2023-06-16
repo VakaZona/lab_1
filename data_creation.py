@@ -6,11 +6,10 @@ def generateData(n):
     df = pd.DataFrame(
         [
             {
-                "Name": fake.name(),
-                "City": fake.city(),
-                "Job": fake.job(),
-                "Salary": fake.pyint(min_value=10000, max_value=300000, step=5000),
-                "Expirience": fake.pyint(min_value=1, max_value=20, step=1)
+                "Date": fake.date_this_century(),
+                "Time": fake.time(),
+                "Temperature": 0,
+                "Precipitation_procent": fake.pyint(min_value=0, max_value=100, step=10)
             }
             for _ in range(n)
         ]
